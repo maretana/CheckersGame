@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" width="10" height="10" tilewidth="32" tileheight="32">
- <tileset firstgid="1" name="board.png" tilewidth="33" tileheight="33" spacing="1">
+ <tileset firstgid="1" name="board" tilewidth="33" tileheight="33" spacing="1">
   <image source="../sprites/board.png" width="256" height="128"/>
   <tile id="0">
    <properties>
@@ -113,4 +113,5 @@
    eJwTZmBgECKABYGYB4hFgJgND80FVYdPjQiSupFkHisQ8xHAzEAMADV8BR0=
   </data>
  </layer>
+ <objectgroup name="citrus object" width="10" height="10"/>
 </map>
