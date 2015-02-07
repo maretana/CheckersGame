@@ -19,7 +19,8 @@ package com.marioretana.checkersgame {
 		{
 			super.initialize();
 			
-			var mapAtlas:TextureAtlas = new TextureAtlas(Texture.fromBitmap(Bitmap(EmbeddedSources.BOARD_BITMAP_DATA)), EmbeddedSources.BOARD_XML);
+			var boardBitmap:Bitmap = new Bitmap(EmbeddedSources.BOARD_BITMAP_DATA);
+			var mapAtlas:TextureAtlas = new TextureAtlas(Texture.fromBitmap(boardBitmap), EmbeddedSources.BOARD_XML);
 			ObjectMakerStarling.FromTiledMap(EmbeddedSources.BOARD_MAP, mapAtlas);
 		}
 		
