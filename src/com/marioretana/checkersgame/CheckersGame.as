@@ -17,7 +17,7 @@ package com.marioretana.checkersgame {
 		override protected function handleAddedToStage(e:Event) : void
 		{
 			super.handleAddedToStage(e);
-			setUpStarling(false);
+			setUpStarling(true);
 		}
 		
 		override public function handleStarlingReady():void {
