@@ -1,5 +1,6 @@
 package com.marioretana.checkersgame {
 	import citrus.objects.CitrusSprite;
+	import citrus.view.spriteview.SpriteArt;
 
 	import starling.display.DisplayObject;
 	import starling.events.Touch;
@@ -10,7 +11,7 @@ package com.marioretana.checkersgame {
 	
 	public class Chip extends CitrusSprite {
 		
-		public var displayObject:DisplayObject;
+		public var chipSprite:DisplayObject;
 		
 		public function Chip(name : String, color:String) {
 			var params:Object =
@@ -27,18 +28,20 @@ package com.marioretana.checkersgame {
 
 		public function onTouch(event:TouchEvent):void
 		{
-		    var touch:Touch = event.getTouch(displayObject);
+		    var touch:Touch = event.getTouch(chipSprite);
 		    if (touch && touch.phase === TouchPhase.MOVED)
 		    {
 				//var localPos:Point = touch.getLocation(displayObject);
-				this.x = touch.globalX;
-				this.y = touch.globalY;
+				chipSprite.alpha = 0.7;
+				x = touch.globalX - 16;
+				y = touch.globalY - 16;
 		        Utils.logInfo("Touched object at position: " + touch.globalX + ', ' + touch.globalY);
 		    }
 			else if (touch && touch.phase === TouchPhase.ENDED)
 			{
-				this.x = 64;
-				this.y = 32;
+				chipSprite.alpha = 1;
+				x = 64;
+				y = 32;
 			}
 		}
 		

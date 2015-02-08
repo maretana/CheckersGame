@@ -27,7 +27,7 @@ package com.marioretana.checkersgame {
 			var chip:Chip = new Chip('chip1','black');
 			add(chip);
 			var art:DisplayObject = view.getArt(chip) as DisplayObject;
-			chip.displayObject = art;
+			chip.chipSprite = art;
 			art.addEventListener(TouchEvent.TOUCH, chip.onTouch);
 		}
 		
