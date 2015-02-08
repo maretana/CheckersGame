@@ -1,6 +1,5 @@
 package com.marioretana.checkersgame {
 	import citrus.objects.CitrusSprite;
-	import citrus.view.spriteview.SpriteArt;
 
 	import starling.display.DisplayObject;
 	import starling.events.Touch;
@@ -9,6 +8,12 @@ package com.marioretana.checkersgame {
 
 	import flash.display.Bitmap;
 	
+	/**
+	 * Represents one of the game chips.
+	 * This class handles touch events for the chip, bitmap loading
+	 * and reports to the game controller when a chip has been moved.
+	 * @author Mario Retana <maretanar@gmail.com>
+	 */
 	public class Chip extends CitrusSprite {
 		
 		public var chipSprite:DisplayObject;

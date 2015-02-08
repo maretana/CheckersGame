@@ -2,6 +2,11 @@ package com.marioretana.checkersgame {
 	import flash.display.Bitmap;
 	import flash.display.BitmapData;
 	
+	/**
+	 * This is a utility class to embed all external resources to the application on compilation time.
+	 * External resources may be images, sound effects, XML files and others.
+	 * @author Mario Retana <maretanar@gmail.com>
+	 */
 	public class EmbeddedSources {
 		
 		[Embed(source="/../resources/Tiled/board.tmx", mimeType="application/octet-stream")]

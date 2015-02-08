@@ -5,6 +5,10 @@ package com.marioretana.checkersgame {
 	import flash.events.Event;
 
 	[SWF(width="320",height="320",backgroundColor="#000000",frameRate="60")]
+	/**
+	 * Main class of the game. Sets display mode and starts the game state.
+	 * @author Mario Retana <maretanar@gmail.com>
+	 */
 	public class CheckersGame extends StarlingCitrusEngine {
 		
 		public function CheckersGame() {
@@ -23,7 +27,6 @@ package com.marioretana.checkersgame {
 		override public function handleStarlingReady():void {
 			super.handleStarlingReady();
     		state = new GameState();
-			//ExternalInterface.call("console.log", "Stage created");
 		}
 		
 	}

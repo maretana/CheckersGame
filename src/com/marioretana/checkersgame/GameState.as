@@ -9,7 +9,11 @@ package com.marioretana.checkersgame {
 
 	import flash.display.Bitmap;
 	
-	
+	/**
+	 * The state of the game when players can actually start playing.
+	 * Adds the game board, players and chips to the scene.
+	 * @author Mario Retana <maretanar@gmail.com>
+	 */
 	public class GameState  extends StarlingState
 	{	
 		public function GameState()
@@ -17,6 +21,9 @@ package com.marioretana.checkersgame {
 			super();
 		}
 		
+		/**
+		 * This is where all game elements are instantiated.
+		 */
 		override public function initialize() : void
 		{
 			super.initialize();
