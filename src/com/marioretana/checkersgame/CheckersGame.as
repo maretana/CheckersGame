@@ -4,7 +4,7 @@ package com.marioretana.checkersgame {
 
 	import flash.events.Event;
 
-	[SWF(width="320",height="320",backgroundColor="#bebebe",frameRate="60")]
+	[SWF(width="320",height="320",backgroundColor="#000000",frameRate="60")]
 	public class CheckersGame extends StarlingCitrusEngine {
 		
 		public function CheckersGame() {
@@ -23,6 +23,7 @@ package com.marioretana.checkersgame {
 		override public function handleStarlingReady():void {
 			super.handleStarlingReady();
     		state = new GameState();
+			//ExternalInterface.call("console.log", "Stage created");
 		}
 		
 	}
