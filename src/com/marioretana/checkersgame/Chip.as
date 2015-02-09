@@ -1,4 +1,5 @@
 package com.marioretana.checkersgame {
+	import flash.display.BitmapData;
 	import citrus.objects.CitrusSprite;
 
 	import starling.display.DisplayObject;
@@ -16,9 +17,21 @@ package com.marioretana.checkersgame {
 	 */
 	public class Chip extends CitrusSprite {
 		
+		/**
+		 * Enumerator for the chip's color.
+		 * When a chip is instantiated, the color parameter should be one of these values.
+		 */
+		public static const CHIP_COLOR:Object =
+		{
+			BLACK : 0,
+			RED : 1,
+			WHITE : 2
+		};
+		
 		public var chipSprite:DisplayObject;
 		
-		public function Chip(name : String, color:String) {
+		public function Chip(name : String, color:Number) {
+			var bitmapData:BitmapData = getColorBitmapData(color);
 			var params:Object =
 			{
 				x : 64,
@@ -26,9 +39,24 @@ package com.marioretana.checkersgame {
 				width : 32,
 				height : 32,
 				touchable : true,
-				view : new Bitmap(EmbeddedSources.BLACK_CHIP_BITMAPDATA)
+				view : new Bitmap(bitmapData)
 			};
 			super(name, params);
+		}
+		
+		private function getColorBitmapData(color:Number):BitmapData
+		{
+			switch (color)
+			{
+				case CHIP_COLOR.BLACK:
+					return EmbeddedSources.BLACK_CHIP_BITMAPDATA;
+				case CHIP_COLOR.RED:
+					return EmbeddedSources.RED_CHIP_BITMAPDATA;
+				case CHIP_COLOR.WHITE:
+					return EmbeddedSources.WHITE_CHIP_BITMAPDATA;
+				default:
+					return null;
+			}
 		}
 
 		public function onTouch(event:TouchEvent):void
