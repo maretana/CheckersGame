@@ -13,8 +13,8 @@ package com.marioretana.checkersgame {
 		
 		public function CheckersGame() {
 			super();
-			_baseWidth = 320;
-			_baseHeight = 320;
+			_baseWidth = GlobalConfiguration.STAGE_WIDTH;
+			_baseHeight = GlobalConfiguration.STAGE_HEIGHT;
 			_viewportMode = ViewportMode.FULLSCREEN;
 		}
 		

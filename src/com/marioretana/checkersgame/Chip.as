@@ -37,9 +37,9 @@ package com.marioretana.checkersgame {
 		    if (touch && touch.phase === TouchPhase.MOVED)
 		    {
 				//var localPos:Point = touch.getLocation(displayObject);
-				chipSprite.alpha = 0.7;
-				x = touch.globalX - 16;
-				y = touch.globalY - 16;
+				chipSprite.alpha = GlobalConfiguration.CHIP_USER_MOVED_ALPHA;
+				x = touch.globalX - GlobalConfiguration.TILE_WIDTH / 2;
+				y = touch.globalY - GlobalConfiguration.TILE_HEIGHT / 2;
 		        Utils.logInfo("Touched object at position: " + touch.globalX + ', ' + touch.globalY);
 		    }
 			else if (touch && touch.phase === TouchPhase.ENDED)
